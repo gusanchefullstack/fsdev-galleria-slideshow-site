@@ -28,7 +28,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .grid {
     columns: 1;
     padding: var(--spacing-md);
