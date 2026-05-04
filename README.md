@@ -10,6 +10,8 @@ A responsive art gallery slideshow web app that lets users browse 15 famous pain
 
 This is a solution to the [Galleria slideshow site](https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6) challenge on Frontend Mentor.
 
+**Live demo:** [https://fsdev-galleria-slideshow-site.vercel.app](https://fsdev-galleria-slideshow-site.vercel.app)
+
 ## Table of Contents
 
 - [Screenshots](#screenshots)
