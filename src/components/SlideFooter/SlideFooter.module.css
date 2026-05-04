@@ -1,0 +1,84 @@
+.footer {
+  position: fixed;
+  bottom: 4px; /* above progress bar */
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  z-index: 150;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-grey-150);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-2xl);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 1.2;
+}
+
+.artist {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-grey-400);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: opacity 0.2s ease;
+  color: var(--color-black);
+}
+
+.navBtn:hover {
+  opacity: 0.5;
+}
+
+.navBtn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.navBtn img {
+  width: 25px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: var(--spacing-md);
+  }
+
+  .title {
+    font-size: 0.875rem;
+  }
+
+  .artist {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+  break-inside: avoid;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.card:hover .overlay {
+  opacity: 0.5;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-card);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-white);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.artist {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}

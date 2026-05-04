@@ -1,0 +1,303 @@
+.detail {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 848px 1fr;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-3xl) var(--spacing-2xl);
+  align-items: start;
+}
+
+/* ---- Left column: image + overlapping info panel ---- */
+.imageInfoContainer {
+  position: relative;
+  height: 624px;
+  width: 100%;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 475px;
+  height: 560px;
+}
+
+.heroImage {
+  width: 475px;
+  height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+.viewImageBtn {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 13px 16px;
+  font-family: var(--font-serif);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+
+.viewImageBtn:hover {
+  opacity: 0.5;
+}
+
+.viewImageBtn img {
+  width: 12px;
+  height: 12px;
+}
+
+/* Info panel: overlaps right side of image with white background */
+.infoPanel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 445px;
+  height: 624px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleSection {
+  padding-bottom: 64px;
+  max-width: 380px;
+}
+
+.paintingTitle {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-md);
+}
+
+.paintingArtist {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-grey-400);
+}
+
+.artistPhotoContainer {
+  padding: 0 96px;
+}
+
+.artistPhoto {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Right column: year + description ---- */
+.descriptionColumn {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 565px;
+}
+
+.yearText {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-serif);
+  font-size: 12.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+  color: var(--color-grey-100);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.descriptionContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 455px;
+  max-width: 350px;
+}
+
+.description {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.25px;
+  color: var(--color-grey-400);
+}
+
+.sourceLink {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-grey-400);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.sourceLink:hover {
+  color: var(--color-black);
+}
+
+/* ---- Tablet (768px – 1100px) ---- */
+@media (max-width: 1100px) {
+  .detail {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    gap: var(--spacing-3xl);
+  }
+
+  .imageInfoContainer {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .heroImageWrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .infoPanel {
+    position: absolute;
+    width: 55%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 0;
+  }
+
+  .titleSection {
+    padding-bottom: var(--spacing-md);
+  }
+
+  .paintingTitle {
+    font-size: 2.5rem;
+  }
+
+  .artistPhotoContainer {
+    padding: var(--spacing-md) 0;
+  }
+
+  .artistPhoto {
+    width: 80px;
+    height: 80px;
+  }
+
+  .descriptionColumn {
+    min-height: auto;
+  }
+
+  .yearText {
+    font-size: 9rem;
+  }
+}
+
+/* ---- Mobile (< 768px) ---- */
+@media (max-width: 767px) {
+  .detail {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 0;
+  }
+
+  .imageInfoContainer {
+    min-height: auto;
+    margin-bottom: 80px;
+  }
+
+  .heroImageWrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .viewImageBtn {
+    bottom: var(--spacing-sm);
+    left: var(--spacing-sm);
+    font-size: 9px;
+    padding: 12px 14px;
+  }
+
+  .infoPanel {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: auto;
+    bottom: -80px;
+    right: auto;
+    left: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 0;
+  }
+
+  .titleSection {
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .paintingTitle {
+    font-size: 1.75rem;
+  }
+
+  .artistPhotoContainer {
+    padding: 0;
+  }
+
+  .artistPhoto {
+    width: 64px;
+    height: 64px;
+  }
+
+  .descriptionColumn {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-3xl);
+    gap: var(--spacing-md);
+    min-height: auto;
+  }
+
+  .yearText {
+    position: static;
+    font-size: 6.25rem;
+    align-self: flex-end;
+    line-height: 1;
+  }
+
+  .descriptionContent {
+    height: auto;
+    gap: var(--spacing-xl);
+    max-width: 100%;
+  }
+}
