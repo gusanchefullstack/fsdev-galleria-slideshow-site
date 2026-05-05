@@ -1,15 +1,34 @@
-.track {
+.bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
   height: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
   background-color: var(--color-grey-150);
   z-index: 200;
 }
 
-.fill {
-  height: 100%;
+.bar::-webkit-progress-bar {
+  background-color: var(--color-grey-150);
+}
+
+.bar::-webkit-progress-value {
   background-color: var(--color-black);
   transition: width 0.3s ease;
+}
+
+.bar::-moz-progress-bar {
+  background-color: var(--color-black);
+  transition: width 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar::-webkit-progress-value,
+  .bar::-moz-progress-bar {
+    transition: none;
+  }
 }

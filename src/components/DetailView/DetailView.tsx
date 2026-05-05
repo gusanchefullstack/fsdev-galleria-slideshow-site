@@ -54,6 +54,7 @@ export default function DetailView({ painting, onViewImage }: DetailViewProps) {
             href={painting.source}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Go to source (opens in new tab)"
             className={styles.sourceLink}
           >
             Go to source
