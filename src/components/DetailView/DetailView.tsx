@@ -8,7 +8,7 @@ interface DetailViewProps {
 
 export default function DetailView({ painting, onViewImage }: DetailViewProps) {
   return (
-    <main className={styles.detail}>
+    <main className={styles.detail} aria-label={`${painting.name} by ${painting.artist.name}`}>
       {/* Left: hero image + overlapping info panel */}
       <section className={styles.imageInfoContainer} aria-label="Painting image">
         <div className={styles.heroImageWrapper}>
@@ -46,7 +46,7 @@ export default function DetailView({ painting, onViewImage }: DetailViewProps) {
       </section>
 
       {/* Right: year + description */}
-      <aside className={styles.descriptionColumn}>
+      <aside className={styles.descriptionColumn} aria-label="Painting description">
         <p className={styles.yearText} aria-hidden="true">{painting.year}</p>
         <div className={styles.descriptionContent}>
           <p className={styles.description}>{painting.description}</p>

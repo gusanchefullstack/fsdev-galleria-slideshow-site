@@ -9,7 +9,7 @@ interface GalleryGridProps {
 
 export default function GalleryGrid({ paintings, onSelectPainting }: GalleryGridProps) {
   return (
-    <main className={styles.grid}>
+    <main className={styles.grid} aria-label="Paintings gallery">
       {paintings.map((painting, index) => (
         <PaintingCard
           key={painting.name}
